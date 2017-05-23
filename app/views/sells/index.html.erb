@@ -1,0 +1,12 @@
+<li><%= link_to "Add Sell", new_sell_path %></li>
+<li><%= link_to('Sort by ID', :order => 'id') %></li>
+<li><%= link_to('Sort by Price', :order => 'mode') %></li>
+<h1>All Sells</h1>
+<% @sells.each do |k| %>
+  <div class="well">
+    <h4>Sell: <%= k.id %></h4>
+    <h2>Model: <%= k.model %></h2>
+    <h3>Price: <%= k.price %></h3>
+    <%= link_to "View", sell_path(k), :class => 'btn btn-default' %>
+  </div>
+<% end %>

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NotebookTest < ActiveSupport::TestCase
+class LaptopsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

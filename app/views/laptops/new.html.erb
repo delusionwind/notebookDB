@@ -1,0 +1,16 @@
+<h1>Add Notebook</h1>
+<%= form_for :laptop, url: laptops_path do |f| %>
+  <% if @laptop.errors.any? %>
+    <% @laptop.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :model %><br>
+    <%= f.text_field(:lmodel, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

@@ -3,6 +3,6 @@
 <% @keyboards.each do |k| %>
   <div class="well">
     <h4>Keyboard: <%= k.id %></h4>
-    <%= link_to "View", disk_path(k), :class => 'btn btn-default' %>
+    <%= link_to "View", keyboard_path(k), :class => 'btn btn-default' %>
   </div>
 <% end %>

@@ -1,0 +1,11 @@
+<li><%= link_to "Add Notebook", new_laptop_path %></li>
+<li><%= link_to('Sort by ID', :order => 'id') %></li>
+<li><%= link_to('Sort by Model', :order => 'mode') %></li>
+<h1>All Notebooks</h1>
+<% @laptops.each do |k| %>
+  <div class="well">
+    <h4>Notebook: <%= k.id %></h4>
+    <h3>Model: <%= k.lmodel %></h3>
+    <%= link_to "View", laptop_path(k), :class => 'btn btn-default' %>
+  </div>
+<% end %>

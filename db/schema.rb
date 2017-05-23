@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523101634) do
+ActiveRecord::Schema.define(version: 20170523161412) do
 
   create_table "brands", force: :cascade do |t|
     t.string   "name"
@@ -57,6 +57,12 @@ ActiveRecord::Schema.define(version: 20170523101634) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "laptops", force: :cascade do |t|
+    t.string   "lmodel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "notebooks", force: :cascade do |t|
     t.string   "model"
     t.string   "weight"
@@ -68,6 +74,13 @@ ActiveRecord::Schema.define(version: 20170523101634) do
   create_table "osystems", force: :cascade do |t|
     t.string   "ostype"
     t.string   "osver"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sells", force: :cascade do |t|
+    t.string   "price"
+    t.string   "model"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
