@@ -1,0 +1,10 @@
+<li><%= link_to "Add Disk", new_disk_path %></li>
+<h1>All Disks</h1>
+<% @disks.each do |disk| %>
+  <div class="well">
+    <h4>Disk: <%= disk.id %></h4>
+    <h3>HDD: <%= disk.dhdd %></h3>
+    <h3>SSD: <%= disk.dssd %></h3>
+    <%= link_to "View", disk_path(disk), :class => 'btn btn-default' %>
+  </div>
+<% end %>

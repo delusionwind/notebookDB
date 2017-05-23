@@ -1,0 +1,9 @@
+<li><%= link_to "Add CPU", new_cpu_path %></li>
+<h1>All CPUs</h1>
+<% @cpus.each do |cpu| %>
+  <div class="well">
+    <h4>CPU: <%= cpu.id %></h4>
+    <h3><%= cpu.cgen %></h3>
+    <%= link_to "View", cpu_path(cpu), :class => 'btn btn-default' %>
+  </div>
+<% end %>

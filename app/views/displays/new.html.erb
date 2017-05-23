@@ -1,0 +1,26 @@
+<h1>Add Display</h1>
+<%= form_for :display, url: displays_path do |f| %>
+  <% if @display.errors.any? %>
+    <% @display.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :size %><br>
+    <%= f.text_field(:size, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :type %><br>
+    <%= f.text_field(:dtype, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :touch %><br>
+    <%= f.text_field(:dtouch, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

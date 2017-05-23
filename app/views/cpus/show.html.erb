@@ -1,0 +1,6 @@
+<h1>CPU: <%= @cpu.id %></h1>
+<h2><%= @cpu.cgen %></h2>
+<p><%= @cpu.cbrand %></p>
+<p><%= @cpu.cfreq %></p>
+<hr>
+<%= link_to "Edit", edit_cpu_path(@cpu), :class => 'btn btn-default' %>

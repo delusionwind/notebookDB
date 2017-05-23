@@ -1,0 +1,21 @@
+<h1>Edit OS</h1>
+<%= form_for :osystem, url: osystem_path(@osystem), method: :patch do |f| %>
+  <% if @osystem.errors.any? %>
+    <% @osystem.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :type %><br>
+    <%= f.text_field(:ostype, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :version %><br>
+    <%= f.text_field(:osver, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

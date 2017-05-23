@@ -1,0 +1,26 @@
+<h1>Edit CPU</h1>
+<%= form_for :cpu, url: cpu_path(@cpu), method: :patch do |f| %>
+  <% if @cpu.errors.any? %>
+    <% @cpu.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :gen %><br>
+    <%= f.text_field(:cgen, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :brand %><br>
+    <%= f.text_field(:cbrand, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :frequency %><br>
+    <%= f.text_field(:cfreq, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

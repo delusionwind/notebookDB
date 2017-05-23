@@ -1,0 +1,6 @@
+<h1>Display: <%= @display.id %></h1>
+<h2>Size: <%= @display.size %></h2>
+<p>Type: <%= @display.dtype %></p>
+<p>Touch Screen: <%= @display.dtouch%></p>
+<hr>
+<%= link_to "Edit", edit_display_path(@display), :class => 'btn btn-default' %>

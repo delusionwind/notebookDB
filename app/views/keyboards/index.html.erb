@@ -1,0 +1,8 @@
+<li><%= link_to "Add Keyboard", new_keyboard_path %></li>
+<h1>All Keyboards</h1>
+<% @keyboards.each do |k| %>
+  <div class="well">
+    <h4>Keyboard: <%= k.id %></h4>
+    <%= link_to "View", disk_path(k), :class => 'btn btn-default' %>
+  </div>
+<% end %>

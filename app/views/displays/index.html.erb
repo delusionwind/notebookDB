@@ -1,0 +1,9 @@
+<li><%= link_to "Add Display", new_display_path %></li>
+<h1>All Displays</h1>
+<% @displays.each do |display| %>
+  <div class="well">
+    <h4>Display: <%= display.id %></h4>
+    <h3><%= display.size %></h3>
+    <%= link_to "View", display_path(display), :class => 'btn btn-default' %>
+  </div>
+<% end %>

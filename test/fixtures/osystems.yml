@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ostype: MyString
+  osver: MyString
+
+two:
+  ostype: MyString
+  osver: MyString

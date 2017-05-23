@@ -1,0 +1,9 @@
+<li><%= link_to "Add GPU", new_gpu_path %></li>
+<h1>All GPUs</h1>
+<% @gpus.each do |gpu| %>
+  <div class="well">
+    <h4>GPU: <%= gpu.id %></h4>
+    <h3><%= gpu.cbrand %> : <%= gpu.cgen %></h3>
+    <%= link_to "View", gpu_path(gpu), :class => 'btn btn-default' %>
+  </div>
+<% end %>

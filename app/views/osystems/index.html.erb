@@ -1,0 +1,10 @@
+<li><%= link_to "Add OS", new_osystem_path %></li>
+<h1>All Operating Systems</h1>
+<% @osystems.each do |k| %>
+  <div class="well">
+    <h4>OS: <%= k.id %></h4>
+    <h3><%= k.ostype %></h3>
+    <p>Version: <%= k.osver %></p>
+    <%= link_to "View", osystem_path(k), :class => 'btn btn-default' %>
+  </div>
+<% end %>

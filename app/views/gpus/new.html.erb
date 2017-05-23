@@ -1,0 +1,26 @@
+<h1>Add GPU</h1>
+<%= form_for :gpu, url: gpus_path do |f| %>
+  <% if @gpu.errors.any? %>
+    <% @gpu.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :gen %><br>
+    <%= f.text_field(:cgen, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :brand %><br>
+    <%= f.text_field(:cbrand, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :ram %><br>
+    <%= f.text_field(:cram, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

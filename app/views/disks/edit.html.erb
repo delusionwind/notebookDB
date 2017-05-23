@@ -1,0 +1,21 @@
+<h1>Edit Disk</h1>
+<%= form_for :disk, url: disk_path(@disk), method: :patch do |f| %>
+  <% if @disk.errors.any? %>
+    <% @disk.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :hdd %><br>
+    <%= f.text_field(:dhdd, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :ssd %><br>
+    <%= f.text_field(:dssd, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

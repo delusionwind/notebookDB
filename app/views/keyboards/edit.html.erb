@@ -1,0 +1,21 @@
+<h1>Edit Keyboard</h1>
+<%= form_for :keyboard, url: keyboard_path(@keyboard), method: :patch do |f| %>
+  <% if @keyboard.errors.any? %>
+    <% @keyboard.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :backlight %><br>
+    <%= f.text_field(:backl, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :numpad %><br>
+    <%= f.text_field(:nump, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

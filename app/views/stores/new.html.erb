@@ -1,0 +1,16 @@
+<h1>Add Store</h1>
+<%= form_for :store, url: stores_path do |f| %>
+  <% if @store.errors.any? %>
+    <% @store.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field(:sname, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

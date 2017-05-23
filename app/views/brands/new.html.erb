@@ -1,0 +1,21 @@
+<h1>Add Brand</h1>
+<%= form_for :brand, url: brands_path do |f| %>
+    <% if @brand.errors.any? %>
+      <% @brand.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+      <% end %>
+    <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :country %><br>
+    <%= f.text_area(:country, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p>
+<% end %>

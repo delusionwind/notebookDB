@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dhdd: MyString
+  dssd: MyString
+
+two:
+  dhdd: MyString
+  dssd: MyString

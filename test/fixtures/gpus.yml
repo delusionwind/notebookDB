@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cgen: MyString
+  cbrand: MyString
+  cram: MyString
+
+two:
+  cgen: MyString
+  cbrand: MyString
+  cram: MyString

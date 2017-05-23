@@ -1,0 +1,9 @@
+<li><%= link_to "Add Brand", new_brand_path %></li>
+<h1>All Brands</h1>
+<% @brands.each do |brand| %>
+  <div class="well">
+    <h4>Brand: <%= brand.id %> </h4>
+    <h3><%= brand.name %></h3>
+    <%= link_to "View", brand_path(brand), :class => 'btn btn-default' %>
+  </div>
+<% end %>
